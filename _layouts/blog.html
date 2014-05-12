@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">{% capture description %}{% if page.description %}{{ page.description }}{% else %}曾经不知你好{% endif %}{% endcapture %}
+    <meta name="description" content="{{ description }}">{% capture tags %}{% if page.tags %}{{ page.tags }}{% else %}曾经不知你好{% endif %}{% endcapture %}
+    <meta name="keywords" content="{{ page.tags | join: ', ' }}"/>
+    <meta name="author" content="liyouhai.com"> {% capture canonical %}http://liyouhai.com{% if site.permalink contains '.html' %}{{ page.url }}{% else %}{{ page.url | remove:'index.html' }}{% endif %}{% endcapture %}
+    <link rel="canonical" href="{{ canonical }}">
+    <link href="/img/favicon.ico" rel="icon" type="image/x-icon">
+    <title>{% if page.title %}{{ page.title }} - {% endif %}曾经不知你好</title>
+    <link rel="stylesheet" href="/css/min/pure-min.css">
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="/css/JekyllPure.css">
+    <!--<![endif]-->
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="/css/min/main-grid-old-ie.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="/css/min/main-grid.css">
+    <!--<![endif]-->
+    <link href="/css/min/font-awesome.min.css" rel="stylesheet">
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="/css/min/font-awesome-ie7.css">
+    <![endif]-->
+    <script src="/js/min/jquery-1.11.0.min.js"></script>
+
+
+</head>
+
+
+<body>
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1  pure-u-med-1-4">
+        <div class="left">
+            <header id="header" class="inner pure-u-4-5">
+                <div class="profilepic">
+                    <a href="/">
+                        <img src="http://liyouhai.com/images/lindachung.jpg" alt="Profile Picture" style="width: 160px;"
+                             title="返回首页">
+                    </a>
+                </div>
+                <h1><a href="/">别要我放弃</a></h1>
+                <h2>Write Less,Do More! if your number's up, I'll find you.</h2>
+                <div class="search">
+                    <form action="/search">
+                        <input type="text" class="search-query" placeholder="Search Blog" name="query"
+                               title="全站搜索-只支持英文">
+                    </form>
+                </div>
+                <div id="rem">
+                    <nav id="main-nav">
+                        <ul class="main-navigation">
+                            <li><a href="/Timing">时间轴</a></li>
+                            <li><a href="/type">分类记</a></li>
+                            <li><a href="/tag">标签库</a></li>
+                            <li><a href="/1" target="_blank">收藏站</a></li>
+                        </ul>
+                    </nav>
+                    <nav id="sub-nav">
+                        <div class="social">
+                            <a class="weibo" href="http://weibo.com/localhost0000" title="weibo">weibo</a>
+                            <a class="github" href="https://github.com/liyouhai" title="GitHub">GitHub</a>
+                            <a class="rss" href="/rss.xml" title="RSS">RSS</a>
+                        </div>
+                    </nav>
+                </div>
+                <div id="toc"></div>
+            </header>
+        </div>
+    </div>
+
+    <div class="container pure-u-1 pure-u-med-3-4">
+        <!--[if lt IE 8]>
+        <i class="label label-danger">亲爱的用户，您的浏览器版本过低，建议您升级浏览器获得更好的用户体验…已防止页面混乱.以及上网的安全.推荐使用Chrome或360速浏览器</i>
+        <![endif]-->
+        {{ content }}
+        <div class="footer">
+            <p>
+                Copyright &copy; {{ site.time | date: "%Y" }} - Theme By <a
+                    href="http://liyouhai.com/project/opensource-jekyll-theme-jekyllpure.html"> JekyllPure</a> -
+                博文原创，转载请注明
+                <script src="/js/min/nprogress.min.js"></script>
+                <script src="/js/index.js"></script>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="topfade"><a href="javascript:;" title="返回顶部"></a></div>
+</body>
+</html>

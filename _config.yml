@@ -1,0 +1,22 @@
+#production_url是sitemap.txt生成的url,方便百度谷歌收录
+production_url: http://liyouhai.com
+#
+# Jekyll Settings
+#
+#rdiscount解析器对于嵌入html javascript代码,为文章增加特定效果兼容较好
+markdown: rdiscount
+rdiscount:
+  extensions: [  "autolink", ]
+markdown_ext:  markdown,mkd,mkdn,md
+highlighter: pygments
+permalink: /:categories/:title.html
+paginate: 7
+paginate_path: "page/:num"
+exclude: [ "README.md",".idea",".iml",".name",".Node"]
+encoding: "utf-8"
+#在发布文章时使用一个未来的日期
+future: true
+#产生相关页面的索引
+lsi:      false
+#禁用定制插件
+safe:     false

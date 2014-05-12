@@ -1,0 +1,199 @@
+code {
+    padding: 1px 4px;
+    background-color: rgba(102, 128, 153, 0.075);
+    border-radius: 4px;
+    font-family: "Consolas", "Courier New", "Courier", "FreeMono", monospace;
+    word-wrap: break-word;
+}
+
+pre {
+    font-family: 'Consolas', 'DejaVu Sans Mono',
+    'Bitstream Vera Sans Mono', monospace;
+    font-size: 16px;
+    letter-spacing: 0.015em;
+    line-height: 120%;
+    border: 0px solid #ccc;
+}
+pre code {
+    font-family: Consolas, Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace;
+    font-size: 0.85em;
+    line-height: 1.5;
+    display: block;
+    border-left: 10px solid rgba(102,128,153,0.075);
+    margin: 10px 0 8px 0;
+    padding: 5px 15px;
+    overflow-x: auto;
+    word-wrap: break-word;
+}
+
+pre .hll { background-color: #ffffcc }
+
+pre .c { color: #60a0b0; font-style: italic }
+
+pre .k { color: #007020; font-weight: bold }
+pre .o { color: #666666 }
+pre .cm { color: #60a0b0; font-style: italic }
+pre .cp { color: #007020 }
+pre .c1 { color: #007020;  }
+pre .cs { color: #60a0b0; background-color: #fff0f0 }
+pre .gd { color: #A00000 }
+pre .ge { font-style: italic }
+pre .gr { color: #FF0000 }
+pre .gh { color: #000080; font-weight: bold }
+pre .gi { color: #00A000 }
+pre .go { color: #888888 }
+pre .gp { color: #c65d09; font-weight: bold }
+pre .gs { font-weight: bold }
+pre .gu { color: #800080; font-weight: bold }
+pre .gt { color: #0044DD }
+pre .kc { color: #007020; font-weight: bold }
+pre .kd { color: #007020; font-weight: bold }
+pre .kn { color: #007020; font-weight: bold }
+pre .kp { color: #007020 }
+pre .kr { color: #007020; font-weight: bold }
+pre .kt { color: #902000 }
+pre .m { color: #40a070 }
+pre .s { color: #4070a0 }
+pre .na { color: #4070a0 }
+pre .nb { color: #007020 }
+pre .nc { color: #0e84b5; font-weight: bold }
+pre .no { color: #60add5 }
+pre .nd { color: #555555; font-weight: bold }
+pre .ni { color: #d55537; font-weight: bold }
+pre .ne { color: #007020 }
+pre .nf { color: #06287e }
+pre .nl { color: #002070; font-weight: bold }
+pre .nn { color: #0e84b5; font-weight: bold }
+pre .nt { color: #062873; font-weight: bold }
+pre .nv { color: #bb60d5 }
+pre .ow { color: #007020; font-weight: bold }
+pre .w { color: #bbbbbb }
+pre .mf { color: #40a070 }
+pre .mh { color: #40a070 }
+pre .mi { color: #40a070 }
+pre .mo { color: #40a070 }
+pre .sb { color: #4070a0 }
+pre .sc { color: #4070a0 }
+pre .sd { color: #4070a0; font-style: italic }
+pre .s2 { color: #4070a0 }
+pre .se { color: #4070a0; font-weight: bold }
+pre .sh { color: #4070a0 }
+pre .si { color: #70a0d0; font-style: italic }
+pre .sx { color: #c65d09 }
+pre .sr { color: #235388 }
+pre .s1 { color: #4070a0 }
+pre .ss { color: #517918 }
+pre .bp { color: #007020 }
+pre .vc { color: #bb60d5 }
+pre .vg { color: #bb60d5 }
+pre .vi { color: #bb60d5 }
+pre .il { color: #40a070 }
+.java .hll { background-color: #ffffcc }
+pre .err {
+    border: 0px solid #f92873
+}
+.java .c { color: #aaaaaa; font-style: italic }
+.java .err { color: #FF0000; background-color: #FFAAAA }
+.java .k { color: #0000aa }
+.java .cm { color: #aaaaaa; font-style: italic }
+.java .cp { color: #4c8317 }
+.java .c1 { color: #aaaaaa; font-style: italic }
+.java .cs { color: #0000aa; font-style: italic }
+.java .gd { color: #aa0000 }
+.java .ge { font-style: italic }
+.java .gr { color: #aa0000 }
+.java .gh { color: #000080; font-weight: bold }
+.java .gi { color: #00aa00 }
+.java .go { color: #888888 }
+.java .gp { color: #555555 }
+.java .gs { font-weight: bold }
+.java .gu { color: #800080; font-weight: bold }
+.java .gt { color: #aa0000 }
+.java .kc { color: #0000aa }
+.java .kd { color: #0000aa }
+.java .kn { color: #0000aa }
+.java .kp { color: #0000aa }
+.java .kr { color: #0000aa }
+.java .kt { color: #00aaaa }
+.java .m { color: #009999 }
+.java .s { color: #aa5500 }
+.java .na { color: #1e90ff }
+.java .nb { color: #00aaaa }
+.java .nc { color: #00aa00; text-decoration: underline }
+.java .no { color: #aa0000 }
+.java .nd { color: #888888 }
+.java .ni { color: #880000; font-weight: bold }
+.java .nf { color: #00aa00 }
+.java .nn { color: #00aaaa; text-decoration: underline }
+.java .nt { color: #1e90ff; font-weight: bold }
+.java .nv { color: #aa0000 }
+.java .ow { color: #0000aa }
+.java .w { color: #bbbbbb }
+.java .mf { color: #009999 }
+.java .mh { color: #009999 }
+.java .mi { color: #009999 }
+.java .mo { color: #009999 }
+.java .sb { color: #aa5500 }
+.java .sc { color: #aa5500 }
+.java .sd { color: #aa5500 }
+.java .s2 { color: #aa5500 }
+.java .se { color: #aa5500 }
+.java .sh { color: #aa5500 }
+.java .si { color: #aa5500 }
+.java .sx { color: #aa5500 }
+.java .sr { color: #009999 }
+.java .s1 { color: #aa5500 }
+.java .ss { color: #0000aa }
+.java .bp { color: #00aaaa }
+.java .vc { color: #aa0000 }
+.java .vg { color: #aa0000 }
+.java .vi { color: #aa0000 }
+.java .il { color: #009999 }
+.label-danger {
+    background-color: #d9534f;
+}
+
+.label {
+    display: inline;
+    padding: .2em .6em .3em;
+    font-size: 75%;
+    font-weight: bold;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: pre-wrap;
+    vertical-align: baseline;
+    border-radius: .25em
+}
+
+.label[href]:hover, .label[href]:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer
+}
+ /*post toc*/
+#toc ul{
+    list-style-type:none;
+    text-align:left;
+    padding-left: 0px;
+}
+#toc a {
+    font-size: 12px;
+}
+#toc .top-active a{
+    color: #258fb8 !important;
+}
+#toc .top-h3 {
+    padding-left: 10px;
+}
+.grcode{
+    float: right;
+    top: 15px;
+    color: #ffffff;
+}
+.qrcodeTable{
+    z-index:2000;
+    position: relative;
+    top: 5px;
+    left: -50px;
+}

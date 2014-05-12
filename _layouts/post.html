@@ -1,0 +1,33 @@
+---
+layout: blog
+---
+
+<div class="qrcodeTable"></div>
+<div class="content pure-u-22-24">
+
+    <h1 class="title" itemprop="name">{{ page.title }}</h1>
+
+    <p class="post-meta">By {{ page.date | date: "%m" }}月{{ page.date | date: "%d" }}日  {{ page.date | date: "%Y" }}  <a
+            class="post-category post-category-design" href="#">{{ page.categories | first }}</a> <a
+            class="post-category post-category-pure" href="#"> {{ page.tags | first }}</a></p>
+
+
+    {{ content }}
+<div class="ceshi"></div>
+    <link href="/css/code.css" rel="stylesheet">
+    <link href="/css/min/fancybox.css" rel="stylesheet">
+    <script src="/js/min/jquery.toc.min.js" ></script>
+    <script src="/js/min/jquery.qrcode.min.js" ></script>
+    <script src="/js/min/jquery.fancybox.pack.js" ></script>
+    <script src="/js/page.js" ></script>
+
+    {% if  page.sharing != false %}
+    {% include sharing.html %}
+    {% endif %}
+    {% if  page.duoshuo != false %}
+    {% include duoshuo.html %}
+    {% endif %}
+
+</div>
+
+

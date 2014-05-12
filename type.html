@@ -1,0 +1,31 @@
+---
+layout: blog
+title : 博文分类
+permalink: type/
+---
+
+
+<div class="f3">
+    {% for category in site.categories %}
+    <div class="column fJqueryba">
+        <h2 class=""><a href="/{{ category | first }}/" class="gray_2">{{ category | first }}</a></h2>
+        <ul class="columnUl">
+            {% for post in category[1] %}
+            <li>
+                <b><a href="{{ post.url  }}" title="" class="gray_2" target="_blank">{{ post.title }}</a></b>
+                <span>{{ post.date | date_to_string }}</span>
+            </li>
+            {% endfor %}
+
+        </ul>
+    </div>
+    {% endfor %}
+</div>
+
+<link rel="stylesheet" href="/css/min/type.css" type="text/css" media="screen" />
+<script src="/js/min/jquery.highight.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $(".f3").jquerybaHighlight({HighlightClass:"Highlight"});
+    });
+</script>

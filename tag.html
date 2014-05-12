@@ -1,0 +1,47 @@
+---
+layout: blog
+title : 标签云
+permalink: tag/
+---
+
+<div id='tagcloud' >
+    {% for tag in site.tags %}
+    <a href="/tag#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
+    {% endfor %}
+</div>
+<script src="/js/min/jquery.tagcloud.min.js"></script>
+<script type="text/javascript">
+    $.fn.tagcloud.defaults = {
+        size: {start: 15, end: 45, unit: 'pt'},
+        color: {start: '#90a0dd', end: '#0cf'}
+    };
+    $(function () {
+        $('#tagcloud a').tagcloud();
+    });
+
+</script>
+
+
+<div class="f5">
+    {% for tag in site.tags %}
+    <div class="column fJqueryba">
+        <h2 class=""><a name="{{ tag[0] }}"></a>{{ tag[0] }}</h2>
+        <ul class="columnUl">
+            {% for post in tag[1] %}
+            <li>
+                <b><a href="{{ post.url  }}" title="" class="gray_2" target="_blank">{{ post.title }}</a></b>
+                <span>{{ post.date | date_to_string }}</span>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endfor %}
+</div>
+<link rel="stylesheet" href="/css/min/type.css" type="text/css"  media="screen" />
+<script src="/js/min/jquery.highight.min.js"></script>
+
+<script type="text/javascript">
+    $(function(){
+        $(".f5").jquerybaHighlight({HighlightClass:"Highlight"});
+    });
+</script>

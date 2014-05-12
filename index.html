@@ -1,0 +1,41 @@
+---
+layout: blog
+---
+
+{% for post in paginator.posts %}
+<div class="posts">
+
+    <section class="post">
+        <header class="post-header">
+            <img class="post-avatar" height="48" width="48"
+                 src="{{ post.avatarimg }}">
+
+            <h2 class="post-title">{{ post.title }}</h2>
+
+            <p class="post-meta">By {{ post.date | date: "%m" }}月{{ post.date | date: "%d" }}日  {{ post.date | date: "%Y" }}  <a
+                    class="post-categorybut " href="#">{{ post.categories  }}</a><a
+                    class="post-category " href="#"> {{ post.tags | first }}</a><a
+                    class="post-category " href="#">  {{ post.tags[1] }}</a>
+
+
+
+            </p>
+        </header>
+
+        <div class="post-description">
+            {{ post.content | split:'<!-- more -->'| first }}
+
+
+            <a href="{{ post.url }}" class="post-categorybut">阅读全文</a>
+        </div>
+    </section>
+</div>
+{% endfor %}
+
+
+
+
+
+
+
+

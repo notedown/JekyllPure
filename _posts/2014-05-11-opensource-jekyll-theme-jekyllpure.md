@@ -1,5 +1,18 @@
-Jekyll主题:JekyllPure版本V0.4.2
-==========
+---
+layout: post
+title: Jekyll主题 &bull;JekyllPure
+description: "Static Markdown (or Textile), Liquid, HTML & CSS go in. Static sites come out ready for deployment. Jekyll template guide,JekyllPure是一个基于jekyll主题,集成了各种方便的插件,以及简洁的页面"
+category: Project
+avatarimg: "http://liyouhai.com/images/lindachung.jpg"
+tags : [ Jekyll ,静态博客,主题]
+duoshuo: false
+---
+
+> JekyllPure版本V0.4.2 <br>
+> 最后更新:2014-05-11 16:00
+<!-- more -->
+
+
 Demo:[曾经不知你好'Blog](http://liyouhai.com/)
 
 最后更新时间:2014-05-12 22:00
