@@ -3,17 +3,38 @@ layout: blog
 ---
 
 <div class="qrcodeTable"></div>
-<div class="content pure-u-22-24">
+<header class="post-header">
+    <img class="post-avatar" height="48" width="48"
+         src="{{ page.avatarimg }}">
 
-    <h1 class="title" itemprop="name">{{ page.title }}</h1>
+    <h2 class="post-title">{{ page.title }}</h2>
 
     <p class="post-meta">By {{ page.date | date: "%m" }}月{{ page.date | date: "%d" }}日  {{ page.date | date: "%Y" }}  <a
-            class="post-category post-category-design" href="#">{{ page.categories | first }}</a> <a
-            class="post-category post-category-pure" href="#"> {{ page.tags | first }}</a></p>
+            class="post-categorybut " href="/type/#{{ post.categories  }}">{{ page.categories  }}</a><a
+            class="post-category " href="/tag/#{{ page.tags | first }}"> {{ page.tags | first }}</a><a
+            class="post-category " href="/tag/#{{ page.tags[1] }}">  {{ page.tags[1] }}</a>
+
+
+
+    </p>
+</header>
+<div class="content pure-u-22-24">
+
 
 
     {{ content }}
-<div class="ceshi"></div>
+    <div class="pagination">
+        {% if page.previous %}
+        <a class="pagination-item newer" href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }} "><i class="fa fa-mail-reply"></i>&nbsp;{{ page.previous.title }}</a>
+        {% else %}
+        <span class="pagination-item newer">上一篇&nbsp;<i class="fa fa-chain-broken"></i></span>
+        {% endif %}
+        {% if page.next %}
+        <a class="pagination-item older" href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">{{ page.next.title }}&nbsp;<i class="fa fa-mail-forward"></i></a>
+        {% else %}
+        <span class="pagination-item older">下一篇&nbsp;<i class="fa fa-chain-broken"></i></span>
+        {% endif %}
+    </div>
     <link href="/css/code.css" rel="stylesheet">
     <link href="/css/min/fancybox.css" rel="stylesheet">
     <script src="/js/min/jquery.toc.min.js" ></script>

@@ -105,7 +105,7 @@ body{
     *vertical-align: auto;
     zoom: 1;
     *display: inline;
-    text-indent: -9999px;
+    text-align: center;
     margin: 0 15px 15px 0;
     opacity: 0.5;
     width: 28px;
@@ -120,7 +120,8 @@ body{
     opacity: 1
 }
 #sub-nav .social a.weibo {
-    background: url('/img/weibo.png') center no-repeat #55cff8;
+    line-height:25px;
+    background-color:  #55cff8;
     border: 1px solid #55CFF8;
 }
 
@@ -129,16 +130,17 @@ body{
 }
 
 #sub-nav .social a.github {
-    background: url('/img/github.png') center no-repeat #afb6ca;
-    border: 1px solid #afb6ca;
+    background-color:  #afb6ca;
+    border: 0px solid #afb6ca;
 }
 
 #sub-nav .social a.github:hover {
-    border: 1px solid #909ab6
+    border: 0px solid #909ab6
 }
 
 #sub-nav .social a.rss {
-    background: url('/img/rss.png') center no-repeat #ef7522;
+    line-height:25px;
+    background-color: #ef7522;
     border: 1px solid #EF7522;
 }
 
@@ -152,7 +154,9 @@ blockquote{
     background: rgba(102, 128, 153, 0.05);
     margin:1em 0.3em;
 }
-
+blockquote ul li{
+    list-style-type:decimal;
+}
 
 
 /*文章头像*/
@@ -381,4 +385,50 @@ table tr:nth-of-type(2n) {
 
 .topfade a:hover {
     outline: none;
+}
+/*下一页*/
+.pagination {
+    overflow: hidden;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    color: #ccc;
+    text-align: center;
+}
+
+.pagination-item {
+    display: block;
+    padding: 1rem;
+    border: 1px solid #eee;
+}
+
+.pagination-item:first-child {
+    margin-bottom: -1px;
+}
+
+a.pagination-item:hover {
+    background-color: #6a9fb5;
+    color: #ffffff;
+}
+
+@media (min-width: 30rem) {
+    .pagination {
+        margin: 3rem 0;
+    }
+
+    .pagination-item {
+        float: left;
+        width: 45%;
+    }
+
+    .pagination-item:first-child {
+        margin-bottom: 0;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+    }
+
+    .pagination-item:last-child {
+        margin-left: -1px;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
 }
