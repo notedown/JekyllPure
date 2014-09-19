@@ -13,26 +13,21 @@ layout: blog
             class="post-categorybut " href="/type/#{{ post.categories  }}">{{ page.categories  }}</a><a
             class="post-category " href="/tag/#{{ page.tags | first }}"> {{ page.tags | first }}</a><a
             class="post-category " href="/tag/#{{ page.tags[1] }}">  {{ page.tags[1] }}</a>
-
-
-
     </p>
 </header>
-<div class="content pure-u-22-24">
-
-
-
+<div class="article pure-u-22-24">
     {{ content }}
-    <div class="pagination">
+</div>
+    <div class="pure-g pagination">
         {% if page.previous %}
-        <a class="pagination-item newer" href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }} "><i class="fa fa-mail-reply"></i>&nbsp;{{ page.previous.title }}</a>
+        <a class="pure-u-1-2 pagination-item " href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }} "><p> <i class="fa fa-mail-reply"></i>&nbsp;{{ page.previous.title }}</p></a>
         {% else %}
-        <span class="pagination-item newer">上一篇&nbsp;<i class="fa fa-chain-broken"></i></span>
+        <span class="pure-u-1-2 pagination-item "><p>上一篇&nbsp;<i class="fa fa-chain-broken"></i></p></span>
         {% endif %}
         {% if page.next %}
-        <a class="pagination-item older" href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">{{ page.next.title }}&nbsp;<i class="fa fa-mail-forward"></i></a>
+        <a class="pure-u-1-2 pagination-item " href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}"><p>{{ page.next.title }}&nbsp;<i class="fa fa-mail-forward"></i></p></a>
         {% else %}
-        <span class="pagination-item older">下一篇&nbsp;<i class="fa fa-chain-broken"></i></span>
+        <span class="pure-u-1-2 pagination-item "><p>下一篇&nbsp;<i class="fa fa-chain-broken"></i></p></span>
         {% endif %}
     </div>
     <link href="/css/code.css" rel="stylesheet">
@@ -49,6 +44,6 @@ layout: blog
     {% include duoshuo.html %}
     {% endif %}
 
-</div>
+
 
 

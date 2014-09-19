@@ -1,12 +1,10 @@
 $(function () {
-    $(".content a").attr("target", "_blank");
-    $("hgroup").remove();
-    $("#rem").remove();
-    $("#header h2").remove();
-    $(".profilepic img").css("width", "100px")
-    $(".profilepic").append('<div class="grcode"><i class="fa fa-qrcode"></i>手机扫描</div>');
-    $('#toc').toc({'container': '.content', 'selectors': 'h1,h2', prefix: 'top'});
-    $('.content').each(function (i) {
+    $(".article a").attr("target", "_blank");
+    $(".brand-title,.brand-tagline,nav").remove();
+    $(".headerpic img").css("width", "100px")
+    $(".headerpic").append('<div class="grcode"><i class="fa fa-qrcode"></i>手机扫描</div>');
+    $('#toc').toc({'container': '.article', 'selectors': 'h1,h2,h3', prefix: 'top'});
+    $('.article').each(function (i) {
         $(this).find('img').each(function () {
             if ($(this).parent().hasClass('fancybox')) return;
             var url2 = this.src;

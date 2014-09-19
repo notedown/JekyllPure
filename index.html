@@ -1,9 +1,11 @@
 ---
 layout: blog
+description: ""
+tags : [ 原创 ,博客,技术博文,web开发,J2EE开发者,曾经不知你好]
 ---
 
 {% for post in paginator.posts %}
-<div class="posts">
+
 
     <section class="post">
         <header class="post-header">
@@ -15,10 +17,7 @@ layout: blog
             <p class="post-meta">By {{ post.date | date: "%m" }}月{{ post.date | date: "%d" }}日  {{ post.date | date: "%Y" }}  <a
                     class="post-categorybut " href="/type/#{{ post.categories  }}">{{ post.categories  }}</a><a
                     class="post-category " > {{ post.tags | first }}</a><a
-                    class="post-category ">  {{ post.tags[1] }}</a>
-
-
-
+                    class="post-category " >  {{ post.tags[1] }}</a>
             </p>
         </header>
 
@@ -29,27 +28,26 @@ layout: blog
             <a href="{{ post.url }}" class="post-categorybut">阅读全文</a>
         </div>
     </section>
-</div>
-{% endfor %}
-<div class="pagination">
 
+{% endfor %}
+<div class="pure-g pagination">
     {% if paginator.previous_page %}
     {% if paginator.page == 2 %}
-    <a class="pagination-item newer" href="/">Newer</a>
+    <a class="pure-u-1-2 pagination-item" href="/"><p>Newer</p></a>
     {% else %}
-    <a class="pagination-item newer" href="/page/{{paginator.previous_page}}">Newer</a>
+    <a class=" pure-u-1-2 pagination-item" href="/page/{{paginator.previous_page}}"><p>Newer</p></a>
     {% endif %}
     {% else %}
-    <span class="pagination-item newer">Newer</span>
+    <span class=" pure-u-1-2 pagination-item"><p>Newer</p></span>
     {% endif %}
+
 
     {% if paginator.next_page %}
-    <a class="pagination-item older" href="/page/{{paginator.next_page}}">Older</a>
+    <a class=" pure-u-1-2 pagination-item" href="/page/{{paginator.next_page}}"><p>Older</p></a>
     {% else %}
-    <span class="pagination-item older">Older</span>
+    <span class=" pure-u-1-2 pagination-item"><p>Older</p></span>
     {% endif %}
 </div>
-
 
 
 

@@ -1,6 +1,6 @@
 code {
     padding: 1px 4px;
-    background-color: rgba(102, 128, 153, 0.075);
+    background-color: #e8ecef;
     border-radius: 4px;
     font-family: "Consolas", "Courier New", "Courier", "FreeMono", monospace;
     word-wrap: break-word;
@@ -19,7 +19,7 @@ pre code {
     font-size: 0.85em;
     line-height: 1.5;
     display: block;
-    border-left: 10px solid rgba(102,128,153,0.075);
+    border-left: 10px solid #dbe2e6;
     margin: 10px 0 8px 0;
     padding: 5px 15px;
     overflow-x: auto;
@@ -172,28 +172,40 @@ pre .err {
     cursor: pointer
 }
  /*post toc*/
+#toc{
+    width: 250px;
+    margin: 0 auto;
+    line-height:30px;
+}
 #toc ul{
     list-style-type:none;
     text-align:left;
-    padding-left: 0px;
 }
 #toc a {
     font-size: 12px;
+    text-decoration: none;
+}
+#toc a:hover{
+    color: #258fb8;
 }
 #toc .top-active a{
     color: #258fb8 !important;
 }
 #toc .top-h3 {
-    padding-left: 10px;
+    padding-left: 4px;
 }
 .grcode{
     float: right;
     top: 15px;
     color: #ffffff;
+
 }
 .qrcodeTable{
     z-index:2000;
     position: relative;
     top: 5px;
     left: -50px;
+}
+.search form INPUT[type="text"] {
+    width: auto;
 }
